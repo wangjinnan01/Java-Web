@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--表单-->
+		<form action="" method="post">
+			<input  type="hidden" name="uid" value="1"/><br />
+			用户名：<input size="70" type="text" name="username" /><br />
+			密码：<input type="password" name="password"/><br />
+			性别：男：<input type="radio" name="sex" value="man" />
+				女：<input type="radio" checked="checked" name="sex" value="woman"/><br />
+			爱好：
+			   <input type="checkbox" name="hobby" value="smoking"/> 抽烟
+			   <input type="checkbox" name="hobby" value="drink"/> 喝酒
+			   <input type="checkbox" checked="checked" name="hobby" value="tangtou"/> 烫头   <br />
+			上传头像：
+				<input type="file" name="photo" /> <br />
+			出生日期：<input type="date" /><br />
+			年龄：<input type="number" name="age" />
+			<br />
+			邮箱：<input type="email" /><br />
+			取色器：<input type="color" /><br />
+			国家：<input type="text" readonly="readonly" value="中国" /><br />
+			学历：
+				<select name="xueli" >
+					<option value="bs">博士</option>
+					<option value="ss">硕士</option>
+					<option value="bk">本科</option>
+					<option value="xx" selected="selected">小学</option>
+				</select>
+			<br />
+			个人介绍(不低于100字):<textarea rows="10" name="jieshao" cols="10">1221212121</textarea><br />
+			<input disabled="disabled" /><br />
+			<input type="submit"  value="用户注册"/>
+			<input type="reset"  value="重置"/>
+			<input type="button" value="普通按钮"/>
+			<input type="image" <!--src="../img/cancan.jpg"-->/>
+			
+		</form>
+	</body>
+</html>
