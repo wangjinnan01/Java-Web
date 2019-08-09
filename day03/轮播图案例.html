@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			//切换图片
+			var count = 1;
+			function changeImg(){
+				//1、获取img元素
+				var img = document.getElementById("lbt");
+				//2、修改其src属性值
+				img.src = "/day03/img/"+(++count)+".jpg";
+				//当count = 3 ，恢复初始化的值
+				if(count == 3){
+					count = 0;
+				}
+			}
+		</script>
+	</head>
+	<body onload="setInterval('changeImg()',2000)">
+		<img id="lbt" src="../../img/1.jpg" width="100%" />
+	</body>
+</html>

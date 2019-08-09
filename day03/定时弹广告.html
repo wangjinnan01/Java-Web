@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.hideImg{
+				display: none;
+			}
+			.showImg{
+				display: block;
+			}
+		</style>
+		<script>
+			//显示图片
+			function showImg(){
+				//1、选中广告图片
+				var img = document.getElementById("ad");
+				//2、修改class值
+				img.className = "showImg";
+				//2秒后隐藏广告
+				setTimeout("hideImg()",2000);
+			}
+			//隐藏图片
+			function hideImg(){
+				//1、选中广告图片
+				var img = document.getElementById("ad");
+				//2、修改class值
+				img.className = "hideImg";
+			}
+		</script>
+	</head>
+	<body onload="setTimeout('showImg()',2000)">
+		<img  src="../img/1.jpg" width="100%" class="hideImg" id="ad">
+	</body>
+</html>

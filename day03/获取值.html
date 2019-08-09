@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function run1(){
+				//1、获取用户名的input元素对象
+				var ele = document.getElementById("aaa");
+				//2、获取该元素的value值
+				alert(ele.value);
+			}
+		</script>
+	</head>
+	<body>
+		用户名：<input id="aaa" type="text" name="username" /><br />
+		<input type="button" value="获取用户名的值" onclick="run1()" />
+	</body>
+</html>

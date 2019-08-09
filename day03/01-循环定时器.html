@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			//计数器
+			var count = 0;
+			var id = setInterval("run()",1000);
+			
+			function run(){
+				alert(count);
+				//当count = 6时，停止循环
+				if(count == 6){
+					//清除定时器
+					clearInterval(id);
+					alert("结束啦！！！");
+				}
+				++count;
+			}
+			/*setInterval(function(){
+				alert("6666");
+			},2000);*/
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
