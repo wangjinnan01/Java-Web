@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--引入jquery-->
+		<script type="text/javascript" src="../js/jquery-3.3.1.js" ></script>
+		
+		<script>
+			function run(){
+				//js方式
+				var e1 = document.getElementById("xi");//js对象
+				//alert(e1);
+				//jq方式
+				//alert($("#xi").value);
+				//alert(jQuery("#xi").val());
+				
+				alert($("#abc").html());  //jq对象不能用js中的属性或者方法
+			}
+		</script>
+	</head>
+	<body>
+		<div id="abc">哈哈哈哈哈哈哈哈哈哈或</div>
+		<input type="text" value="西游记" id="xi"/><br />
+		<input type="button" value="获取id为xi的值" onclick="run()" />
+	</body>
+</html>

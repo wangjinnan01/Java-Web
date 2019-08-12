@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--引入jquery-->
+		<script type="text/javascript" src="../js/jquery-3.3.1.js" ></script>
+		
+		<script>
+			function run(){
+				//js方式
+				var js1 = document.getElementById("xi");//js对象
+				// js对象转换成jq对象
+				var jq1 = $(js1);
+				//alert(jq1.val());//可以调用
+				// jq对象转换成js对象     jq:本质是一个js数组
+				//var js2 = jq1.get(0);
+				var js2 = jq1[0];
+				alert(js2.value);
+			}
+		</script>
+	</head>
+	<body>
+		<div id="abc">哈哈哈哈哈哈哈哈哈哈</div>
+		<input type="text" value="西游记" id="xi"/><br />
+		<input type="button" value="获取id为xi的值" onclick="run()" />
+	</body>
+</html>

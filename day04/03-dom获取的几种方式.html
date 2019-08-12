@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+			function run1(){
+				//1、展示span内容体
+			var span = document.getElementById("s1");
+			alert(span.innerHTML);
+			}
+			function run2(){
+			//1、展示两个单选框的value
+			var arr = document.getElementsByName("sex");
+			//2、遍历数组
+			for(var i=0;i<arr.length;i++){
+				alert(arr[i].value);
+			}
+			}
+			function run3(){
+			//1、展示三个div的内容体
+			var arr = document.getElementsByTagName("div");
+			//2、遍历数组
+			for(var i=0;i<arr.length;i++){
+				alert(arr[i].innerHTML);
+			}
+			}
+			function run4(){
+			//1、展示三个font的内容体
+			//var arr = document.getElementsByTagName("font");
+			var arr = document.getElementsByClassName("redF");
+			//2、遍历数组
+			for(var i=0;i<arr.length;i++){
+				alert(arr[i].innerHTML);
+			}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<span id="s1">span1111</span>
+		<hr />
+		<input type="radio" name="sex" value="man"/>男
+		<input type="radio" name="sex" value="woman"/>女
+		<hr />
+		<div>div1111</div>
+		<div>div2222</div>
+		<div>div3333</div>
+		<hr />
+		<font class="redF">红色字体1</font>
+		<font class="redF">红色字体2</font>
+		<font class="redF">红色字体3</font>
+		<br />
+		<input type="button" value="点击展示span内容体" onclick="run1()" />
+		<input type="button" value="点击展示两个单选框的value" onclick="run2()" />
+		<input type="button" value="点击展示三个div的内容体" onclick="run3()" />
+		<input type="button" value="点击展示三个font的内容体" onclick="run4()" />
+	</body>
+</html>

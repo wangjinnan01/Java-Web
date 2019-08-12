@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function run1(){
+				alert("获取焦点了！！")
+			}
+			
+			function run2(){
+				alert("失去焦点了！！")
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" value="获取焦点时执行" onfocus="run1()"/><br />
+		<input type="text" value="失去焦点时执行" onblur="run2()"/>
+	</body>
+</html>

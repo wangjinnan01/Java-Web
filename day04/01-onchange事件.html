@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function run(obj){
+				alert("值发生了改变"+obj.value);
+			}
+			
+			function run2(obj){
+				alert("值发生了改变"+obj);
+			}
+		</script>
+	</head>
+	<body>
+		<select onchange="run(this)">
+			<option>四大名著</option>
+			<option value="yanyi">三国演义</option>
+			<option value="xiyou">西游记</option>
+			<option value="shuihu">水浒传</option>
+			<option value="honglou">红楼梦</option>
+		</select>
+		
+		<input type="button" value="按钮" onclick="run2(this)" />
+	</body>
+</html>

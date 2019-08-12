@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function run1(){
+				var span = document.getElementById("aaa");
+				//获取内容体
+				alert(span.innerHTML);
+			}
+			function  run2 () {
+				var span = document.getElementById("aaa");
+				span.innerHTML = "<font color='aqua' size='5'>今天天气去真好！！！</font>";
+			}
+		</script>
+	</head>
+	<body>
+		<span id="aaa">
+			<font color="red">今天是8月12号!!!</font>
+		</span>
+		<br />
+		<input type="button" onclick="run1()" value="获取span标签的内容体" /><br />
+		<input type="button" onclick="run2()" value="设置span标签的内容体" />
+	</body>
+</html>

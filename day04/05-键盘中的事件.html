@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+			<script>
+			function run1(){
+				alert("键位被按下了");
+			}
+			function run2(){
+				alert("键位被弹起了");
+			}
+			function run3(){
+				alert("鼠标移入了");
+			}
+			function run4(){
+				alert("鼠标移出了");
+			}
+		</script>
+	</head>
+	<body>
+	
+		<input value="某个键位被按下时会弹出窗口" onkeydown="run1()" />
+		<hr />
+		<input value="某个键位被弹起时会弹出窗口" onkeyup="run2()" />
+		<hr />
+		<input value="鼠标移入时会弹出窗口" onmouseover="run3()" />
+		<hr />
+		<input value="鼠标移出时会弹出窗口" onmouseout="run4()" />
+	</body>
+</html>
