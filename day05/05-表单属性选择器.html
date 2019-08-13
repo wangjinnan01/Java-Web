@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../../js/jquery-3.3.1.js" ></script>
+		<script>
+			$(function(){
+				//获取可用的表单输入项
+				//var arr = $("input:enabled");
+				//alert(arr.length);
+				//获取不可用的表单输入项
+				var arr = $("input:disabled");
+				//alert(arr.length);
+				//获取选中的复选框
+				arr = $("[type=checkbox]:checked");
+				//alert(arr.length);
+				//获取国家下拉框中，被选中的option 
+				arr = $("#country>option:selected")
+				alert(arr.length);
+			});
+		</script>
+	</head>
+	<body>
+		<h1>不可用的表单输入项</h1>
+		<input type="text" disabled="disabled" />
+		<input type="button" value="不可用按钮" disabled="disabled" />
+		<h1>复选框</h1>
+		<input type="checkbox" name="hobby" value="code"/>编程
+		<input type="checkbox" name="hobby" value="swimming" checked="checked"/>游泳
+		<input type="checkbox" name="hobby" value="reading" checked="checked"/>阅读
+		<hr />
+		<h1>下拉选择框</h1>
+		城市：<select id="city">
+			<option value="">请选择</option>
+			<option value="bj">北京</option>
+			<option value="sh">上海</option>
+		</select>
+		<hr />
+		国家：<select id="country" multiple="multiple">
+			<option value="China" selected="selected">中国</option>
+			<option value="America" selected="selected">美国</option>
+			<option value="Russia">俄罗斯</option>
+			<option value="England">英国</option>
+		</select>
+	</body>
+</html>

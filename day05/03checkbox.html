@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../../js/jquery-3.3.1.js" ></script>
+		<script>
+			//全选
+			function quan(){
+				//选中所有复选框     并将其checked修改为true
+				$(".itemSelect").prop("checked",true);
+			}
+			//全不选
+			function bu(){
+				//选中所有复选框     并将其checked修改为false
+				$(".itemSelect").prop("checked",false);
+			}
+			//反选
+			//function fan(){
+				/*//获取复选框的状态
+				此方式行不通
+				var temp = $(".itemSelect").prop("checked");
+				alert(temp);
+				//设置checked  取反
+				//$(".itemSelect").prop("checked",!temp);*/
+				// 获取所有选中的复选框    并将其checked修改为false
+				var arr1 = $(".itemSelect:checked");
+				//获取所有未选中的复选框，并将其checked修改为true
+				var arr2 = $(".itemSelect:not(.itemSelect:checked)")
+				arr1.prop("checked",false);
+				arr2.prop("checked",true);
+			//}
+			
+			//使用jq数组方式实现反选
+			function fan(){
+				//获取所有复选框
+				var arr = $(".itemSelect");
+				//遍历
+				arr.each(function(){
+					//当前复选框的状态
+					var temp = $(this).prop("checked");
+					//取反
+					$(this).prop("checked",!temp);
+				})
+			}
+		</script>
+	</head>
+	<body>
+		<table border="1" cellpadding="0" cellspacing="0" width="80%">
+			<tr>
+				<th>
+					<input type="button" value="全选" onclick="quan()"/>
+					<input type="button" value="全不选" onclick="bu()"/>
+					<input type="button" value="反选" onclick="fan()"/>
+				</th>
+				<th>编号</th>
+				<th>姓名</th>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" class="itemSelect" />		
+				</td>
+				<td>1</td>
+				<td>唐三藏</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" class="itemSelect" />		
+				</td>
+				<td>2</td>
+				<td>悟空</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" class="itemSelect" />		
+				</td>
+				<td>3</td>
+				<td>八戒</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" class="itemSelect" />		
+				</td>
+				<td>4</td>
+				<td>沙和尚</td>
+			</tr>
+		</table>
+	</body>
+</html>

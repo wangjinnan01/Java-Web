@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../../js/jquery-3.3.1.js" ></script>
+		
+		<script>
+			//定义数组
+			var arr = ["三国演义","西游记","红楼梦","水浒传"];
+			// js遍历方式
+			/*for(var i = 0 ;i<arr.length;i++){
+				alert(arr[i]);
+			}*/
+			//jq方式一
+		/*	$(arr).each(function(index){
+				// 索引
+				//alert(index);
+				// 数组中的元素
+				//alert(arr[index]);
+				//alert(this)//this  js对象
+				alert("元素为："+this+"，索引为："+index);
+			})*/
+			//jq方式二
+			$.each($(arr), function(index) {
+				alert("元素为："+this+"，索引为："+index);
+			});
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

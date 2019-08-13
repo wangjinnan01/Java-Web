@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<script type="text/javascript" src="../../js/jquery-3.3.1.js" ></script>
+	<!--<script type="text/javascript" src="../../js/jquery-1.11.0.min.js" ></script>-->
+		<style>
+			.blueDiv{
+				background-color: #87CEFA;
+				width:300px;
+				height:300px;
+			}
+			.redDiv{
+				background-color: red;
+				width:300px;
+				height:300px;
+			}
+		</style>
+		<script>
+			$(function(){
+				//1、获取d2这个div标签的class值
+				var v1 = $("#d2").prop("class");
+				alert(v1);
+				//2、设置d1这个div标签样式为blueDiv
+				$("#d1").prop("class","blueDiv");
+				//3、移除d2这个div标签的redDiv样式
+				$("#d2").removeAttr("class");
+			});
+		</script>
+	</head>
+	<body>
+		<div id="d1">11111</div>
+		<div id="d2" class="redDiv">22222</div>
+		<input type="text" value="哈哈哈" id="d3"/>
+	</body>
+</html>

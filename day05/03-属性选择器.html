@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../../js/jquery-3.3.1.js" ></script>
+		<script>
+			$(function(){
+				//1、获取所有存在type属性的标签
+				/*var arr = $("[type]");
+				alert(arr.length);*/
+				//2、获取所有type属性为radio的标签
+				/*var arr = $("[type=radio]");
+				alert(arr.length);*/
+				//3、获取所有type属性含有o的标签
+				/*var arr = $("[type*=o]");
+				alert(arr.length);*/
+				//4、获取所有input标签中的单选框，且name为sex的标签
+				var arr = $("input[type=radio][name=sex]");
+				alert(arr.length);
+			});
+		</script>
+	</head>
+	<body>
+		用户名：<input type="text" name="uname" value="小刘"/><br />
+		密码：<input type="password" name="pwd" value="123"/><br />
+		性别：<input type="radio" name="sex" value="man" />男
+			  <input type="radio" name="sex" value="woman" />女<br />
+		是否VIP：<input type="radio" name="vip" value="no" />不是
+			  	 <input type="radio" name="vip" value="yes" />是<br />
+	</body>
+</html>

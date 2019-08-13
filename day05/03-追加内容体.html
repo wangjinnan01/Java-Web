@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../../js/jquery-3.3.1.js" ></script>
+		
+		<script>
+			
+			$(function(){
+				//尾部追加
+				$("#aaa").click(function(){
+					//往哪追加
+					var ul = $("#rank");
+					//追加什么
+					var li = "<li>JAVA</li>";
+					//追加动作(方法)
+					//ul.append(li);
+					$(li).appendTo(ul);
+				})
+				//头部追加
+				$("#bbb").click(function(){
+					//往哪追加
+					var ul = $("#rank");
+					//追加什么
+					var li = "<li>JAVA</li>";
+					//追加动作(方法)
+					//ul.prepend(li);
+					$(li).prependTo(ul);
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<ul id="rank">
+			<li>Php</li>
+			<li>Android</li>
+			<li>Ios</li>
+		</ul>
+		<hr />
+		<input type="button" id="aaa" value="列表尾部追加Java" />
+		<input type="button" id="bbb" value="列表头部追加Java" />
+	</body>
+</html>

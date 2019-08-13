@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../../js/jquery-3.3.1.js" ></script>
+		<script>
+			$(function(){
+				//1、在所有DIV标签中，获取第一个div
+					//alert($("div:first").html());
+					//alert($("div:eq(0)").html());
+				//2、在所有DIV标签中，获取最后一个div
+					//alert($("div:last").html());
+				//3、在所有DIV标签中，获取所有偶数位的div
+				 /* var arr = $("div:even");
+				  for(var i=0;i<arr.length;i++){
+				  	alert(arr[i].innerHTML);
+				  }*/
+				//4、在所有DIV标签中，获取所有奇数位的div
+				 /*var arr = $("div:odd");
+				  for(var i=0;i<arr.length;i++){
+				  	alert(arr[i].innerHTML);
+				  }*/
+				//5、在所有DIV标签中，获取除了第一位以外所有的div
+				 /*var arr = $("div:not(div:first)");
+				  for(var i=0;i<arr.length;i++){
+				  	alert(arr[i].innerHTML);
+				  }*/
+				//6、在所有DIV标签中，获取索引等于1的div
+				//alert($("div:eq(1)").html());
+				//7、在所有DIV标签中，获取索引大于1的div
+				/*var arr = $("div:gt(1)");
+				  for(var i=0;i<arr.length;i++){
+				  	alert(arr[i].innerHTML);
+				  }*/
+				//8、在所有DIV标签中，获取索引小于1的div
+				var arr = $("div:lt(1)");
+				  for(var i=0;i<arr.length;i++){
+				  	alert(arr[i].innerHTML);
+				  }
+			});
+		</script>
+	</head>
+	<body>
+		<div>11111111，索引是0</div>
+		<div>22222222，索引是1</div>
+		<div>33333333，索引是2</div>
+		<div>44444444，索引是3</div>
+		<div>55555555，索引是4</div>
+		<div>66666666，索引是5</div>
+		<div>77777777，索引是6</div>
+		<div>88888888，索引是7</div>
+	</body>
+</html>

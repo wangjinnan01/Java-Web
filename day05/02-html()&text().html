@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../../js/jquery-3.3.1.js" ></script>
+		<script>
+			function run1(){
+				alert($("#d1").html());
+			}
+			function run3(){
+				alert($("#d1").text());
+			}
+			function run2(){
+				$("#d1").html("<font color='blue'>蓝色字体</font>");
+			}
+			function run4(){
+				$("#d1").text("<font color='blue'>纯文本</font>");
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div id="d1">
+			<font color="red">你好</font>
+		</div>
+		<hr />
+		<input type="button" value="点我获取内容体代码" onclick="run1()"/>
+		<input type="button" value="点我设置内容体代码为蓝色字体" onclick="run2()"/>
+		<hr />
+		<input type="button" value="点我获取内容体纯文本" onclick="run3()"/>
+		<input type="button" value="点我设置内容体纯文本" onclick="run4()"/>
+	</body>
+</html>

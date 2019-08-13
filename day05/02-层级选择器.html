@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../../js/jquery-3.3.1.js" ></script>
+		<script>
+			$(function(){
+				//1、获取id为main的span标签 内 所有的div标签
+				/*	var arr1 = $("#main div");//arr1 jq对象
+					for(var i=0;i<arr1.length;i++){
+						alert(arr1[i].innerHTML);//arr1[i]  JS对象
+					}*/
+				//2、获取id为main的span标签 内 子元素div标签
+					/*var arr1 = $("#main>div");//arr1 jq对象
+					for(var i=0;i<arr1.length;i++){
+						alert(arr1[i].innerHTML);//arr1[i]  JS对象
+					}*/
+				//3、获取id为main的span标签 后 第一个div兄弟标签
+					/*var arr1 = $("#main+div");//arr1 jq对象
+					for(var i=0;i<arr1.length;i++){
+						alert(arr1[i].innerHTML);//arr1[i]  JS对象
+					}*/
+				//4、获取id为main的span标签 后 所有的div兄弟标签
+				var arr1 = $("#main~div");//arr1 jq对象
+					for(var i=0;i<arr1.length;i++){
+						alert(arr1[i].innerHTML);//arr1[i]  JS对象
+					}
+				
+			});
+		</script>
+	</head>
+	<body>
+		<span id="main">
+					<div>111111</div>
+					<div>222222</div>
+					<div>333333</div>
+					<span>
+						<div>44444</div>
+					</span>
+		</span>
+		<div>55555</div>
+		<span>
+			<div>66666</div>
+		</span>
+		<div>77777</div>
+	</body>
+</html>

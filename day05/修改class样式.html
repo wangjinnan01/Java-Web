@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../../js/jquery-3.3.1.js" ></script>
+		<style>
+			.blueDiv{
+				background-color: #87CEFA;
+				width:300px;
+				height:300px;
+			}
+			.redDiv{
+				background-color: red;
+				width:300px;
+				height:300px;
+			}
+		</style>
+		<script>
+			$(function(){
+				//1、设置d1这个div标签样式为blueDiv
+					//js写法
+					//document.getElementById("d1").className = "blueDiv";
+					//jq写法
+					$("#d1").addClass("blueDiv");
+				//2、移除d2这个div标签的redDiv样式
+				  $("#d2").removeClass();
+			});
+		</script>
+	</head>
+	<body>
+		
+
+		<div id="d1">11111</div>
+		<div id="d2" class="redDiv">22222</div>
+	</body>
+</html>

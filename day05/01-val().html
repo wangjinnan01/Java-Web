@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../../js/jquery-3.3.1.js" ></script>
+		<script>
+			
+			$(function(){
+				//jq中的事件
+				$("#aaa").click(function(){
+					alert($("#uname").val());
+				})
+				
+				$("#bbb").click(function(){
+					$("#uname").val("郭靖");
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<input type="text" id="uname" value="黄蓉" /><br />
+		<input type="button" id="aaa" value="点击获取输入框的value值" />
+		<input type="button" id="bbb" value="点击设置输入框的value值" />
+	</body>
+</html>

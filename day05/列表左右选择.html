@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/jquery-3.3.1.js" ></script>
+		<script>
+			$(function(){
+				//1、将左边选中的追加到右边末尾
+				$("#a").click(function(){
+					//往哪追加
+					var right = $("#rightSelectId");
+					//追加什么
+					var left = $("#leftSelectId option:selected")
+					//追加方法
+					right.append(left);
+				})
+				//2、将左边所有的追加到右边末尾
+				$("#b").click(function(){
+					//往哪追加
+					var right = $("#rightSelectId");
+					//追加什么
+					var left = $("#leftSelectId option")
+					//追加方法
+					right.append(left);
+				})
+				//1、将右边选中的追加到左边末尾
+				$("#c").click(function(){
+					//往哪追加
+					var left = $("#leftSelectId");
+					//追加什么
+					var right = $("#rightSelectId option:selected")
+					//追加方法
+					left.append(right);
+				})
+				//1、将右边所有的追加到左边末尾
+				$("#d").click(function(){
+					//往哪追加
+					var left = $("#leftSelectId");
+					//追加什么
+					var right = $("#rightSelectId option")
+					//追加方法
+					left.append(right);
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<select id="leftSelectId" multiple="multiple" style="width: 100px;height: 200px;">
+			<option>左1</option>
+			<option>左2</option>
+			<option>左3</option>
+			<option>左4</option>
+			<option>左5</option>
+		</select>
+		<input type="button" value="》" id="a" />
+		<input type="button" value="》》" id="b"/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="button" value="《"   id="c"/>
+		<input type="button" value="《《" id="d"/>
+		<select id="rightSelectId" multiple="multiple" style="width: 100px;height: 200px;">
+			<option>右1</option>
+			<option>右2</option>
+			<option>右3</option>
+			<option>右4</option>
+			<option>右5</option>
+		</select>
+		<hr />
+		
+	</body>
+</html>

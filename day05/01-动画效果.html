@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../../js/jquery-3.3.1.js" ></script>
+		<style>
+			#d1{
+				background-color:lightskyblue;
+				width:300px;
+				height:300px;
+			}
+		</style>
+		<script>
+			//展示
+			function run1(){
+				//基本效果
+				//1、选中要显示的元素对象
+				var div = $("#d1");
+				//2、调用显示方法
+				//滑动效果
+				//div.slideDown(2000);
+				//div.show(3000);
+				//淡入淡出
+				div.fadeIn(3000,function(){
+					alert("展示成功！！")
+				});
+			}
+			//隐藏
+			function run2(){
+				//1、选中要隐藏的元素对象
+				var div = $("#d1");
+				//2、调用隐藏方法
+				//div.hide(3000);
+				//div.slideUp(2000);
+				div.fadeOut(3000,function(){
+					alert("隐藏成功！！");
+				});
+			}
+			//切换显示/隐藏
+			function run3(){
+				//1、选中要切换的元素对象
+				var div = $("#d1");
+				//2、调用切换方法
+				//div.toggle(2000);
+				//div.slideToggle(2000);
+				div.fadeToggle(3000);
+			}
+		</script>
+	</head>
+	<body>
+		
+	<div id="d1"></div>
+		<input type="button" value="展示" onclick="run1()" />
+		<input type="button" value="隐藏" onclick="run2()" />
+		<input type="button" value="切换显示/隐藏" onclick="run3()" />
+	</body>
+</html>
