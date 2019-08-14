@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--导入    是有顺序的-->
+		<script type="text/javascript" src="../js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript" src="../js/jquery.validate.js" ></script>
+		<script type="text/javascript" src="../js/messages_zh.js" ></script>
+		<style>
+			
+			label{
+				color: red;
+			}
+		</style>
+		
+		<!--表单校验-->
+		<script>
+			$(function(){
+				//自定义校验规则
+				$.validator.addMethod(
+					"haha",function(value,ele,param){
+						var reg = /^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$|^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/;
+						//校验value值符不符合身份证表达式
+						return reg.test(value);
+					},"您输入的身份证不合法！！！"
+				);
+				
+				
+				//为id为f1的表单加入校验
+				$("#f1").validate({
+					//校验规则
+					rules:{
+						//给用户名加入校验
+						username:{
+							required:true,
+							/*minlength:6,
+							maxlength:10*/
+							rangelength:[6,10]
+						},
+						//为邮箱加入校验
+						email:{
+							email:true
+						},
+						//为出生日期加入校验规则
+						birthday:{
+							dateISO:true
+						},
+						//为薪资加入校验规则
+						sal:{
+							number:true
+						},
+						//为工作时长加入校验规则
+						workForday:{
+							range:[8,20]
+						},
+						//为密码加入校验规则
+						pwd:{
+							required:true
+						},
+						//为确认密码加入校验规则
+						repwd:{
+							required:true,
+							equalTo:pwd
+						},
+						//为身份证加入校验规则
+						idNumber:{
+							haha:true
+						}
+					},
+					//为规则自定义信息
+					messages:{
+						//给用户名自定义信息
+						username:{
+							required:"亲，必须填写哦额！！！"
+						},
+						workForday:{
+							range:"请注意劳逸结合，不要偷懒，一天工作不要低于{0}个小时，同时要注意身体，不要高于{1}个小时"
+						}
+					}
+				}
+				);
+			})
+		</script>
+	</head>
+	<body>
+		
+		<form id="f1">
+			<table border="1" width="100%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td colspan="3"><font color="cornflowerblue" size="5">测试表单</font></td>
+				</tr>
+				<tr>
+					<td>用户名（必填字段，长度范围6~10）</td>
+					<td colspan="2">
+						<input type="text" name="username"  />
+					</td>
+				</tr>
+				<tr>
+					<td>Email（符合邮件格式）</td>
+					<td colspan="2">
+						<input type="text" name="email" />
+					</td>
+				</tr>
+				<tr>
+					<td>出生日期（日期格式）</td>
+					<td colspan="2">
+						<input type="text" name="birthday" />
+					</td>
+				</tr>
+				<tr>
+					<td>薪资（数字）</td>
+					<td colspan="2">
+						<input type="text" name="sal" />
+					</td>
+				</tr>
+				<tr>
+					<td>身份证号码</td>
+					<td colspan="2">
+						<input type="text" name="idNumber" />
+					</td>
+				</tr>
+				<tr>
+					<td>一天工作时长（值范围6~16）</td>
+					<td colspan="2">
+						<input type="text" name="workForday" />
+					</td>
+				</tr>
+				<tr>
+					<td>密码（必须填写）</td>
+					<td colspan="2">
+						<input type="text" name="pwd" id="pwd"/>
+					</td>
+				</tr>
+				<tr>
+					<td>确认密码（必须填写，且与密码值要相同）</td>
+					<td colspan="2">
+						<input type="text" name="repwd" />
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td colspan="2">
+						<input type="submit" value="注册" />
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
